@@ -1,0 +1,175 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath, amsthm, amssymb, amsfonts, mathrsfs, amscd, fancyheadings}
+\pagestyle{fancy}
+\usepackage[top=1in, left=1in, right=1in]{geometry}% http://ctan.org/pkg/geometry
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+
+\def\AA{{\mathbb A}}
+\def\BB{{\mathbb B}}
+\def\CC{{\mathbb C}}
+\def\FF{{\mathbb F}}
+\def\GG{{\mathbb G}}
+\def\KK{{\mathbb K}}
+\def\MM{{\mathbb M}}
+\def\NN{{\mathbb N}}
+\def\OO{{\mathbb O}}
+\def\QQ{{\mathbb Q}}
+\def\PP{{\mathbb P}}
+\def\QQ{{\mathbb Q}}
+\def\RR{{\mathbb R}}
+\def\TT{{\mathbb T}}
+\def\ZZ{{\mathbb Z}}
+
+\def\Asf{{\mathsf A}}
+\def\Bsf{{\mathsf B}}
+\def\Esf{{\mathsf E}}
+\def\Fsf{{\mathsf F}}
+\def\Psf{{\mathsf P}}
+\def\Ssf{{\mathsf S}}
+
+\def\hhat{{\hat h}}
+\def\Hhat{{\hat H}}
+
+\def\0{{\mathbf 0}}
+\def\1{{\mathbf 1}}
+\def\a{{\mathbf a}}
+\def\b{{\mathbf b}}
+\def\c{{\mathbf c}}
+\def\e{{\mathbf e}}
+\def\h{{\mathbf h}}
+\def\r{{\mathbf r}}
+\def\w{{\mathbf w}}
+\def\x{{\mathbf x}}
+\def\y{{\mathbf y}}
+\def\z{{\mathbf z}}
+\def\Abf{{\mathbf A}}
+\def\Bbf{{\mathbf B}}
+
+\def\Acal{{\mathcal A}}
+\def\Bcal{{\mathcal B}}
+\def\Ccal{{\mathcal C}}
+\def\Dcal{{\mathcal D}}
+\def\Ecal{{\mathcal E}}
+\def\Fcal{{\mathcal F}}
+\def\Gcal{{\mathcal G}}
+\def\Hcal{{\mathcal H}}
+\def\Ical{{\mathcal I}}
+\def\Jcal{{\mathcal J}}
+\def\Kcal{{\mathcal K}}
+\def\Lcal{{\mathcal L}}
+\def\Mcal{{\mathcal M}}
+\def\Ncal{{\mathcal N}}
+\def\Ocal{{\mathcal O}}
+\def\Pcal{{\mathcal P}}
+\def\Qcal{{\mathcal Q}}
+\def\Rcal{{\mathcal R}}
+\def\Scal{{\mathcal S}}
+\def\Tcal{{\mathcal T}}
+\def\Vcal{{\mathcal V}}
+\def\Xcal{{\mathcal X}}
+\def\Zcal{{\mathcal Z}}
+
+\def\pfrak{{\mathfrak p}}
+\def\Gfrak{{\mathfrak G }}
+\def\Rfrak{{\mathfrak R }}
+
+\def\Kbar{{\bar K}}
+\def\kbar{{\bar k}}
+\def\Fbar{{\bar F}}
+
+\def\arch{\mathrm{arch}}
+\def\Aut{\mathrm{Aut}}
+\def\ch{\mathrm{char}}
+\def\Cl{\mathrm{Cl}}
+\def\ker{\mathrm{Ker}}
+\def\Div{\mathrm{Div}}
+\def\diag{\mathrm{diag}}
+\def\Perm{\mathrm{Perm}}
+\def\diam{\mathrm{diam}}
+\def\disc{\mathrm{disc}}
+\def\sgn{\mathrm{sgn}}
+\def\grad{\mathrm{grad}}
+\def\div{\mathrm{div}}
+\def\Isom{\mathrm{Isom}}
+\def\ns{\mathrm{ns}}
+\def\ab{\mathrm{ab}}
+\def\s{\mathrm{s}}
+\def\Gal{\mathrm{Gal}}
+\def\Nor{\mathrm{Nor}}
+\def\Sym{\mathrm{Sym}}
+\def\sym{\mathrm{sym}}
+\def\Rat{\mathrm{Rat}}
+\def\Hom{\mathrm{Hom}}
+\def\Spec{\mathrm{Spec}}
+\def\Vol{\mathrm{Vol}}
+\def\PGL{\mathrm{PGL}}
+\def\GL{\mathrm{GL}}
+\def\tor{\mathrm{tor}}
+\def\Pic{\mathrm{Pic}}
+\def\PrePer{\mathrm{PrePer}}
+\def\Per{\mathrm{Per}}
+\def\Crit{\mathrm{Crit}}
+\def\Fix{\mathrm{Fix}}
+\def\ord{\mathrm{ord}}
+\def\ad{\mathrm{ad}}
+\def\Res{\mathrm{Res}}
+\def\Prep{\mathrm{Prep}}
+\def\trace{\mathrm{trace}}
+\def\norm{\mathrm{norm}}
+\def\Berk{\mathrm{Berk}}
+\def\supp{\mathrm{supp}}
+\def\st{\mathrm{st}}
+\def\im{\mathrm{Im}}
+\def\CS{\mathrm{CS}}
+\def\min{\mathrm{min}}
+
+\def\GLn{\mathrm{GL_n}}
+\def\Frac{\mathrm{Frac}}
+\def\uf{\mathrm{uf}}
+\def\uc{\mathrm{uc}}
+\def\Tw{\mathrm{Twist}}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prb}{Problem}
+\newtheorem{conj}{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem*{thmdfn}{Theorem/Definition}
+\newtheorem*{dfns}{Definitions}
+\newtheorem*{rem}{Remark}
+\newtheorem{ex}{Example}
+
+\begin{document}
+
+\title{ZK Bootcamp: Day 2 Problem Set}
+\author{Brian Justin Stout\footnote{email: bstout.eth@ethermail.io}}
+\maketitle
+
+\begin{prb}\label{P1}
+Two parts. Part a: Is it true that all odd squares are $\equiv 1\mathrm{ (mod 8)}$? Part b: What about even squares? Are they $\equiv 1\mathrm{ (mod 8)}$?
+\end{prb}
+
+Let $a$ be an odd square. Then for an odd number $\alpha$ we have $\alpha^2=a$. Subtract $1$ from both sides and factor $(\alpha+1)(\alpha-1)=b$ and we wish to show $8|b$. Because $\alpha$ is odd both $\alpha+1$ and $\alpha-1$ are both even. We claim that for any $\alpha$ odd it is true that $\alpha+1$ or $\alpha-1$ is divisible by $4$ and hence all even squares are congruent to $1\mathrm{ (mod 8)}$. We proceed inducively. If $\alpha=3$, then $\alpha+1$ is divisible by $4$. Suppose the result is true for the $n^{th}$ odd number. Arguing by symmetry, assume that $\alpha+1$ is divisible by $4$. Then the next odd number is $\alpha+2$. But then $(\alpha+2)-1=\alpha+1$ which is divisible by $4$.
+
+If $a$ is an even square, we claim $a = 0 \mathrm{ (mod 8)}$ or $a = 4 \mathrm{ (mod 8)}$. Clearly $4=2^2=4\mathrm{ (mod 8)}$ and $16=4^2=0\mathrm{ (mod 8)}$. Assume that $(2k)^2$ is congruent to $0$ or $4$ modulo $8$. Then the next even square is $(2(k+1))^2$ which is congruent to $4(k^2+2k+1)=(4k^2+8k+4)=4k^2+4\mathrm{ (mod 8)}$, which is either $0$ or $4$ depending on the last even square.
+
+\begin{prb}\label{P2}
+Try out the vanity bitcoin address example at asecurity or for Ethereum.
+\end{prb}
+
+I started running an in-browser vanity address generator to find an address with ``brian" at the beginning. I started running on 4 threads at 12:56pm EST. At 2 hours later I have not found my vanity address and had about 1\% chance so far of finding it.
+
+\begin{prb}\label{P3}
+What what do you understand by (a) $O(n)$, (b) $O(1)$, and (c) $O(\log(n))$? For a proof size, which of these would you want?
+\end{prb}
+The terms $O(n), O(1),\mathrm{ and } O(\log(n))$ represent complexity classes of algorithms. They mean that for an algorithm the number of computations on an input of size $n$ grows approximately like $n$, constant, or $\log(n)$. It does not mean that the algorithm uses exactly this number of computations every time, just that the worst case, dominant term is that function, respectively. $O(1)$ means the number of computations is constant size, or doesn't depend on the input size $n$. A proof of size $O(1)$ would be considered very small, because no matter what the statement (large, very large, or extremely large), the proof size is basically the same size.
+
+
+
+\end{document}
